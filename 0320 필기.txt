@@ -1,0 +1,44 @@
+0320 필기
+
+**오늘 가장 힘들었던건 : 페이징 
+모델
+레파짓토리
+서비스
+컨트롤러
+jsp
+
+**오류남 : 오타가 없을 경우 모델파일에 제대로 테이블 명이 제대로 기재되었는지 확인 할것, 디버깅 !! 실행이후 새로고침..........왜 맨날 잊어먹니.. 
+**아무리찾아도 오류가 안될경우 == 함수 괄호가 제대로 있는지 확인하기
+**오늘도...오타오류.. 타이핑 하지말고 그냥 .눌러 ㅄ아
+**jsp오류 : 검색 안되는거 == value로 값 전송되는지 확인 placeholder말고
+
+순서1)  연습 : Emp, EmpRepository, EmpService, EmpController, emp_all.jsp  파일 모델 및 전체조회 실행
+
+//  TODO: 연습 2) empRepository 에 findAllByEnameContaining() like 검색 함수 제작
+//    empService 에 findAllByEnameContaining() 함수 제작
+//    empController 의 getEmpAll() 함수에 페이징 처리 로직 추가
+//    emp_all.jsp 페이징 화면 추가(테이블로 출력)
+//    참고 : 부서 참고
+
+jsp에서 
+size 의 값 의미 현재 페이지 기준 앞뒤로 몇개 나올것인가, 그리고 화면에 몇개의 목록이 보일 것인가--% >
+조회는 method = get방식
+
+
+없는 데이터 조회시 버그 발생 없애는 것
+//       todo : 버그 수정, 블록 엔드페이지가 음수가 되어선 안됨
+//        없는 값을 조회해도 버그가 나지 않게끔 수정,
+ :        blockEndPage=(blockEndPage<0)? 0: blockStartPage;
+
+deptservice 파일 
+
+** 해당 Optional<Dept> 필기할것 
+   /**
+     * //    상세조회 : return :  객체 1개 (null 가능성있음)
+     * //   <mark> 복습 : null 방지 래퍼 클래스 : optional<객체>로 감싸주면 조음
+     * @param  dno
+     * @return 옵셔널 부서 객체
+     */
+
+
+
